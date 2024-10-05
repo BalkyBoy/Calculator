@@ -9,8 +9,8 @@ export default function MyKeyboard() {
     const [secondNumber, setSecondNumber] = React.useState("");
     const [operation, setOperation] = React.useState("");
     const [result, setResult] = React.useState<Number | null>(null);
-    const [recentInputs, setRecentInputs] = React.useState<string[]>([]); // State to track recent inputs
-    const [showRecent, setShowRecent] = React.useState(false); // Toggle for recent tab
+    const [recentInputs, setRecentInputs] = React.useState<string[]>([]);
+    const [showRecent, setShowRecent] = React.useState(false); 
 
     const handleNumberPress = (buttonValue: string) => {
         if (firstNumber.length < 10) {
@@ -61,7 +61,7 @@ export default function MyKeyboard() {
     };
 
     const addToRecent = (input: string) => {
-        setRecentInputs((prev) => [input, ...prev.slice(0, 4)]); // Keep last 5 inputs
+        setRecentInputs((prev) => [input, ...prev.slice(0, 4)]); 
     };
 
     const toggleRecent = () => {
