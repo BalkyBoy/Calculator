@@ -165,7 +165,7 @@ export default function MyKeyboard() {
                     <View style={Styles.row}>
                         <Button title="." onPress={() => handleNumberPress(".")} />
                         <Button title="0" onPress={() => handleNumberPress("0")} />
-                        <Button title="@" onPress={() => setFirstNumber(firstNumber.slice(0, -1))} />
+                        <Button title="()" onPress={() => setFirstNumber(firstNumber.slice(0, -1))} />
                         <Button title="=" isBlue onPress={() => getResult()} />
                     </View>
                 </>
